@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a2e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-container{
+    width:350px;
+    height:450px;
+    perspective: 1000px;
+    cursor:pointer;
+}
+
+.card{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style: preserve-3d;
+    transition:transform 0.7s;
+}
+
+.card-face{
+    position: absolute;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+    padding:40px;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center; 
+}
+
+.card-front{
+    background: linear-gradient(135deg, rgb(188, 137, 188), #667eea);
+    color:#fff;
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+}
+
+.card-front .icon{
+    font-size: 64px;
+    margin-bottom:24px;
+}
+
+.card-front h2{
+    font-size: 26px;
+    margin-bottom:12px;
+}
+
+.card-front p{
+    font-size: 15px;
+    line-height:1.6;
+    opacity: 0.85;
+}
+
+.hint{
+    margin-top:24px;
+    font-size:13px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-back{
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color:#fff;
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 60px rgba(247,87,108,0.4);
+}
+
+.card-back .icon{
+    font-size: 64px;
+    margin-bottom:24px;
+}
+
+.card-back h2{
+    font-size: 26px;
+    margin-bottom:12px;
+}
+
+.card-back p{
+    font-size: 15px;
+    line-height:1.6;
+    opacity: 0.85;
+}
+
